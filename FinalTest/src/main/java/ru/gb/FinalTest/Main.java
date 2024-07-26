@@ -5,15 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import ru.gb.FinalTest.FactoryMethodPattern.PaymentProcessorFactoryImpl;
 
 @SpringBootApplication
-public class TaskManagementStart {
+public class Main {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaskManagementStart.class, args);
+		SpringApplication.run(Main.class, args);
 
-
-
-		PaymentProcessorFactoryImpl test1 = new PaymentProcessorFactoryImpl();
-		test1.createPaymentProcessor().processPayment();
-
+		PaymentProcessorFactoryImpl test = new PaymentProcessorFactoryImpl();
+		test.createPaymentProcessor().processPayment();
 	}
 }
